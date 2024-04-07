@@ -6,7 +6,7 @@
     "start": "node bin/www",
     "dev": "./node_modules/.bin/nodemon bin/www",
     "prd": "pm2 start bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava -v"
   },
   "dependencies": {
     "debug": "^4.1.1",
@@ -22,6 +22,8 @@
     "pug": "^2.0.3"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "ava": "^6.1.2",
+    "nodemon": "^1.19.1",
+    "supertest": "^6.3.4"
   }
 }
