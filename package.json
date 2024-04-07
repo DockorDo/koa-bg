@@ -2,6 +2,7 @@
   "name": "koa-bg",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "node bin/www",
     "dev": "./node_modules/.bin/nodemon bin/www",
@@ -22,8 +23,10 @@
     "pug": "^2.0.3"
   },
   "devDependencies": {
+    "@types/koa-router": "^7.4.8",
     "ava": "^6.1.2",
     "nodemon": "^1.19.1",
-    "supertest": "^6.3.4"
+    "supertest": "^6.3.4",
+    "typescript": "^5.4.4"
   }
 }

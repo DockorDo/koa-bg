@@ -1,13 +1,13 @@
-const Koa = require('koa')
+import Koa from 'koa'
 const app = new Koa()
-const views = require('koa-views')
-const json = require('koa-json')
-const onerror = require('koa-onerror')
-const bodyparser = require('koa-bodyparser')
-const logger = require('koa-logger')
+import views from 'koa-views'
+import json from 'koa-json'
+import onerror from 'koa-onerror'
+import bodyparser from 'koa-bodyparser'
+import logger from 'koa-logger'
 
-const index = require('./routes/index')
-const users = require('./routes/users')
+import index from './routes/index'
+import users from './routes/users'
 
 // error handler
 onerror(app)
