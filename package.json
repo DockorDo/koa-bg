@@ -1,37 +1,36 @@
 {
   "name": "koa-bg",
-  "version": "0.1.0",
-  "type": "module",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "node bin/www",
-    "dev": "ts-node app.ts",
-    "prd": "pm2 start bin/www",
-    "test": "ava -v"
+    "start": "ts-node app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DockorDo/koa-bg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DockorDo/koa-bg/issues"
+  },
+  "homepage": "https://github.com/DockorDo/koa-bg#readme",
+  "description": "",
   "dependencies": {
-    "@types/koa": "^2.15.0",
-    "debug": "^4.1.1",
-    "koa": "^2.7.0",
-    "koa-bodyparser": "^4.2.1",
-    "koa-convert": "^1.2.0",
+    "@koa/router": "^12.0.1",
+    "koa": "^2.15.2",
+    "koa-bodyparser": "^4.4.1",
     "koa-json": "^2.0.2",
-    "koa-logger": "^3.2.0",
-    "koa-onerror": "^4.1.0",
-    "koa-router": "^7.4.0",
-    "koa-static": "^5.0.0",
-    "koa-views": "^6.2.0",
-    "pug": "^2.0.3"
+    "koa-logger": "^3.2.1",
+    "koa2": "^2.0.0-alpha.7"
   },
   "devDependencies": {
+    "@types/koa": "^2.15.0",
+    "@types/koa__router": "^12.0.4",
     "@types/koa-bodyparser": "^4.3.12",
     "@types/koa-json": "^2.0.23",
-    "@types/koa-logger": "^3.1.5",
-    "@types/koa-router": "^7.4.8",
-    "@types/koa-views": "^7.0.0",
-    "ava": "^6.1.2",
-    "nodemon": "^1.19.1",
-    "supertest": "^6.3.4",
-    "typescript": "^5.4.4"
+    "@types/koa-logger": "^3.1.5"
   }
 }
