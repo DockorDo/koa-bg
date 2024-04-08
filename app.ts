@@ -26,9 +26,9 @@ app.use(views(__dirname + '/views', {
 
 // logger
 app.use(async (ctx, next) => {
-  const start = new Date()
+  const start = +new Date()
   await next()
-  const ms = new Date() - start
+  const ms = +new Date() - start
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
 
@@ -41,4 +41,6 @@ app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
 });
 
-module.exports = app
+app.listen(3000, ()=>{
+  console.log("服务器开启 127.0.0.1:3000")
+})

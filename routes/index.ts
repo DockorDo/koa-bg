@@ -1,7 +1,8 @@
 import {default as rt} from 'koa-router'
-const router = new rt();
+import { Context, DefaultState} from 'koa';
+const router = new rt<DefaultState, Context>();
 
-router.get('/', async (ctx, next) => {
+router.get('/', async (ctx) => {
   await ctx.render('index', {
     title: 'Hello Koa 2!'
   })
@@ -16,5 +17,7 @@ router.get('/json', async (ctx, next) => {
     title: 'koa2 json'
   }
 })
+
+export default router
 
 module.exports = router

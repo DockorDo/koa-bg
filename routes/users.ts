@@ -1,5 +1,6 @@
 import {default as rt} from 'koa-router'
-const router = new rt();
+import { Context, DefaultState} from 'koa';
+const router = new rt<DefaultState, Context>();
 
 router.prefix('/users')
 
@@ -10,5 +11,7 @@ router.get('/', function (ctx, next) {
 router.get('/bar', function (ctx, next) {
   ctx.body = 'this is a users/bar response'
 })
+
+export default router
 
 module.exports = router
